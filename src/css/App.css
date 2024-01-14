@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.zoomed-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.9);
+  animation: fadeToBlack 1s ease;
+  transition-timing-function: cubic-bezier(.25,.15,.65,.25);
+}
+@keyframes fadeToBlack {
+  from {background-color: rgba(0,0,0,0);}
+  to {background-color: rgba(0,0,0,0.9);}
+}
+
+.zoomed-photo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  animation: zoomIn 0.5s ease; /* Animation for zooming in */
+  transition: filter 0.5s ease;
+  transition-timing-function: cubic-bezier(.25,.15,.65,.25);
+  animation-timing-function: cubic-bezier(.25,.15,.65,.25);
+  font-size: 0pt;
+}
+
+.zoomed-photo.active {
+  animation: fadeIn 0.5s ease; /* Animation for zooming in */
+  transition: filter 0.5s ease;
+  transition-timing-function: cubic-bezier(.25,.15,.65,.25);
+  animation-timing-function: cubic-bezier(.25,.15,.65,.25);
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0; /* Initial opacity */
+    font-size: 0pt;
+  }
+  to {
+    opacity: 1; /* Final opacity */
+    font-size: 0pt;
+  }
+}
+
+.zoomed-text {
+  text-align: center;
+  color: #ddddd0;
+  width: 50%;
+  animation: fadeIn 1.2s ease-in; /* Animation for zooming in */
+  animation-timing-function: cubic-bezier(.83,.24,.75,.54);
+  font-size: 12pt;
+}
+
+.zoomed-title-text {
+  font-weight: bold;
+  text-align: center;
+  color: #ddddd0;
+  padding: 2.5vh;
+  font-size: 12pt;
+  animation: fadeIn 1s linear; /* Animation for zooming in */
+  animation-timing-function: cubic-bezier(.83,.24,.75,.54);
+}
+
+.zoomed-text-odd {
+  text-align: center;
+  color: #ddddd0;
+  width: 50%;
+  animation: fadeIn 1.7s ease-in; /* Animation for zooming in */
+  animation-timing-function: cubic-bezier(.83,.24,.75,.54);
+  font-size: 12pt;
+
+}
+
+.zoomed-title-text-odd {
+  font-weight: bold;
+  text-align: center;
+  color: #ddddd0;
+  padding: 2.5vh;
+  font-size: 12pt;
+  animation: fadeIn 0.3s ease-in; /* Animation for zooming in */
+  animation-timing-function: cubic-bezier(.83,.24,.75,.54);
+
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Initial opacity */
+    font-size: 12pt;
+  }
+  to {
+    opacity: 1; /* Final opacity */
+    font-size: 12pt;
+  }
+}
