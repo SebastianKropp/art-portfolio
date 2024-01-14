@@ -18,15 +18,17 @@ const TitleRow = () => {
 
   };
   let marginTop = '3.5%';
+  let width = '30%';
   if (isMobile) {
     marginTop = '1%';
+    width = '90%';
   }
   return(
     <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'center', alignItems: 'center', marginTop: marginTop }}>
         <img 
           src={Title} 
           alt="Title" 
-          style={{ width: '300px', height: 'auto' }} 
+          style={{ width: width, height: 'auto' }} 
           onClick={() => handleButtonClick('')}
         />
     </div>
@@ -44,8 +46,8 @@ const PageRow = () => {
   let imageSize = '20%';
   let width = '35%';
   if (isMobile) {
-    imageSize = '20%';
-    width = '90%';
+    imageSize = '22%';
+    width = '90vw';
   }
   return (
     <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center", textAlign: 'center', marginTop: '20px', width: width }}>
@@ -202,8 +204,9 @@ const Home = () => {
       console.log('Zoomed Photo is not rendered')
     }
   }, [isZoomed]);
+  
   return (
-    <div className="Home" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+    <div className="Home" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw'}}>
       <Helmet>
         <style>{'body { background-color: #f6f6e8; }'}</style>
         <meta charSet="utf-8" />

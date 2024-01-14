@@ -1,5 +1,13 @@
-.App {
-  text-align: center;
+
+body {
+  
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+html {
+  
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+
 }
 
 .App-logo {
