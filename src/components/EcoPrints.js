@@ -5,7 +5,24 @@ import {Helmet} from "react-helmet";
 import { imageDescription } from '../imageDescription.js';
 import { useEffect } from 'react';
 import Sidebar from './SideBar';
-
+const SelectedPhoto = ({imageName, category, currentImage}) =>{
+    let imageObjects = []
+    console.log(imageName[0])
+    imageName.forEach((imageName, index) => {
+        if (index != currentImage) {
+            imageObjects.push(<img style={{opacity: '0', position: 'absolute'}} src={`images/${category}/${imageName}`} className='subImages'/>)
+        }
+        else {
+            imageObjects.push(<img id='change-animation' src={`images/${category}/${imageName}`} className='subImages'/>)
+        }
+    })
+    console.log(imageObjects)
+    return (
+        <>        
+        {imageObjects}
+        </>
+    )
+}
 const EcoPrints = () => {
     let home = false
     var imageName = []
@@ -42,18 +59,6 @@ const EcoPrints = () => {
         
     }, [currentImage])
 
-    useEffect(() => {
-        console.log('Changing classes')
-        const textTitle = document.getElementById('change-animation');
-        textTitle.classList.add('fade');
-        setTimeout(() => {
-            textTitle.src = imagePath;
-            textTitle.classList.remove('fade');
-        }, 1000)
-        
-    }, [currentImage])
-
-
     return (
         <div className="Home" style={{width: '100vw', height: '100vh'}}>
         <Helmet>
@@ -70,7 +75,7 @@ const EcoPrints = () => {
         </div>
         <div style={{height:'100vh',width:'100vw', position: 'absolute', top: 0, right: 0}}>
             <div style={{position: 'relative', marginLeft: '18em', marginTop: '4em', marginRight: '0em', justifyContent: 'center', textAlign: 'center', marginRight:'7em'}}>
-                <img id='change-animation' src={imagePath} className='subImages'/>
+                <SelectedPhoto imageName={imageName} category={category} currentImage={currentImage}/>
             </div>
         </div>
         </div>
