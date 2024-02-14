@@ -75,7 +75,7 @@ let imageDescription =
     "Title": "untitled\’ 2023",
     "Body": "californian poppy + daisy ecoprint 8\"x 10\""
     },
-    "ecoprint5.jpg": {
+    "ecoprint3.jpg": {
     "Title": "untitled\'' 2023",
     "Body": "wisteria, poppy, + rosemary ecoprint 6\"x 8\""
     },
