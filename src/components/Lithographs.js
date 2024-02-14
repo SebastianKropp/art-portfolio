@@ -3,7 +3,7 @@ import '../css/App.css';
 import React, { useState } from 'react';
 import {Helmet} from "react-helmet";
 import { imageDescription } from '../imageDescription.js';
-
+import { useEffect } from 'react';
 import Sidebar from './SideBar';
 
 const Lithographs = () => {
@@ -31,6 +31,17 @@ const Lithographs = () => {
         }
     }
 
+    useEffect(() => {
+        console.log('Changing classes')
+        const textTitle = document.getElementById('change-animation');
+        textTitle.classList.add('fade');
+        setTimeout(() => {
+            textTitle.src = imagePath;
+            textTitle.classList.remove('fade');
+        }, 250)
+        
+    }, [currentImage])
+
 
     return (
         <div className="Home" style={{width: '100vw', height: '100vh'}}>
@@ -48,7 +59,7 @@ const Lithographs = () => {
         </div>
         <div style={{height:'100vh',width:'100vw', position: 'absolute', top: 0, right: 0}}>
             <div style={{position: 'relative', marginLeft: '18em', marginTop: '4em', marginRight: '0em', justifyContent: 'center', textAlign: 'center', marginRight:'7em'}}>
-                <img src={imagePath} style={{position: 'relative', maxWidth: '100%', height:'45em', objectFit: 'scale-down', alignSelf: 'center', display: 'inline-block'}}/>
+                <img id='change-animation' src={imagePath} className='subImages'/>
             </div>
         </div>
         </div>
