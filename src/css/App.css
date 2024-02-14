@@ -1,13 +1,108 @@
 
 body {
-  
+  width: '100vw';
+  height: '100vh';
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
+root {
+  width: '100vw';
+  height: '100vh';
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 html {
   
   overflow-x: hidden; /* Hide horizontal scrollbar */
 
+}
+@font-face {
+  font-family: 'brandon-grotesque';
+  src: local('brandon-grotesque'), url(../fonts/HvDTrial_Brandon_Grotesque_light-BF64a625c93e709.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+@font-face {
+  font-family: 'brandon-grotesque';
+  src: local('brandon-grotesque-bold'), url(../fonts/HvDTrial_Brandon_Grotesque_black-BF64a625c944b08.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: local('proxima-nova'), url(../fonts/Fontspring-DEMO-proximanova-medium.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'florenescans';
+  src: local('florenescans'), url(../fonts/Florsn01.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'bricolage-grotesque';
+  src: local('bricolage-grotesque'), url(../fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: local('PT Sans'), url(../fonts/PTSans-Regular.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+.Pages {
+  font-family: 'PT Sans'; 
+  font-style: normal;
+  line-height: 1.8em;
+  font-size: 11px; 
+  color: rgb(91, 87, 72);
+  padding: 0.2em;
+  font-weight: 590;
+  cursor: pointer;
+
+}
+
+.Pages:hover {
+  animation: changeColor 0.25s ease; /* Animation for zooming in */
+  cursor: pointer;
+  color: rgb(22, 21, 21);
+
+}
+
+.OtherPages {
+  font-family: 'proxima-nova'; 
+  cursor: pointer;
+  font-style: normal;
+  line-height: 1.8em;
+  font-size: 11px; 
+  color: rgb(91, 87, 72);
+  padding: 0.2em;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+
+}
+
+.OtherPages:hover {
+  animation: changeColor 0.25s ease; /* Animation for zooming in */
+  cursor: pointer;
+  color: rgb(22, 21, 21);
+
+}
+
+
+@keyframes changeColor {
+  from {
+    color: rgb(91, 87, 72);
+  }
+  to {
+    color: rgb(22, 21, 21);
+  }
 }
 
 .App-logo {

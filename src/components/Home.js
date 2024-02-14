@@ -6,79 +6,12 @@ import {Helmet} from "react-helmet";
 import Title from '../images/TitleNoWords.PNG';
 //import fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowRight, faLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { isMobile } from 'react-device-detect';
+import { homeImage } from '../imageDescription.js';
 
-const TitleRow = () => {
-  const navigate = useNavigate();
+import Sidebar from './SideBar';
 
-  const handleButtonClick = (page) => {
-    // Navigate to the specified page
-    navigate(`/${page}`);
-
-  };
-  let marginTop = '3.5%';
-  let width = '30%';
-  if (isMobile) {
-    marginTop = '1%';
-    width = '90%';
-  }
-  return(
-    <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'center', alignItems: 'center', marginTop: marginTop }}>
-        <img 
-          src={Title} 
-          alt="Title" 
-          style={{ width: width, height: 'auto' }} 
-          onClick={() => handleButtonClick('')}
-        />
-    </div>
-  )
-}
-
-const PageRow = () => {
-  const navigate = useNavigate();
-
-  const handleButtonClick = (page) => {
-    // Navigate to the specified page
-    navigate(`/${page}`);
-
-  };
-  let imageSize = '20%';
-  let width = '35%';
-  if (isMobile) {
-    imageSize = '22%';
-    width = '90vw';
-  }
-  return (
-    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", alignItems: "center", textAlign: 'center', marginTop: '20px', width: width }}>
-      <img
-        src={require('../images/Gallery.PNG')} // Assuming images are in the "art" folder
-        alt={`${"Gallery"}`}
-        style={{ width: imageSize, height: 'auto', cursor: 'pointer' }}
-        onClick={() => handleButtonClick('Gallery')}
-      />
-      <img
-        src={require('../images/About.PNG')} // Assuming images are in the "art" folder
-        alt={"About"}
-        style={{ width: imageSize, height: 'auto', cursor: 'pointer' }}
-        onClick={() => handleButtonClick('About')}
-      />
-      <img
-        src={require('../images/Contact.PNG')} // Assuming images are in the "art" folder
-        alt={"Contact"}
-        style={{ width: imageSize, height: 'auto', cursor: 'pointer' }}
-        onClick={() => handleButtonClick('Contact')}
-      />
-      <img
-        src={require('../images/Store.PNG')} // Assuming images are in the "art" folder
-        alt={"Store"}
-        style={{ width: imageSize, height: 'auto', cursor: 'pointer' }}
-        onClick={() => handleButtonClick('Store')}
-      />
-      {/* Add more buttons as needed */}
-    </div>
-  );
-}
 
 const GridPhoto = ({index, path, isZoomed, setIsZoomed}) => {
 
@@ -102,31 +35,6 @@ const GridPhoto = ({index, path, isZoomed, setIsZoomed}) => {
     />
   )
 }
-
-  const GridRow = ({isZoomed, setIsZoomed}) => {
-    // Replace with your actual list of image file names from the "art" folder
-
-    const imageList = [];
-    const imageTypes = {"litho": 4, "screenprint": 2, "intaglio": 8, "ecoprint": 5, "relief": 1}
-    for (var category in imageTypes) {
-      for (var i = 0; i < imageTypes[category]; i++) {
-        imageList.push(`images/${category}/${category + i}.jpg`)
-      }
-    }
-    let width = "75vw"
-    let padding = "2.5%"
-    if (isMobile) {
-      width = "100vw"
-      padding = "5%"
-    }
-    return (
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: width, padding: padding }}>
-      {imageList.map((path, index) => (
-        <GridPhoto index={index} path={path} isZoomed={isZoomed} setIsZoomed={setIsZoomed}/>
-      ))}
-    </div>
-    );
-  }
 
 const ZoomedImage = ({index, setIsZoomed}) => {
 
@@ -184,40 +92,36 @@ const ZoomedImage = ({index, setIsZoomed}) => {
 }
 
 const Home = () => {
-  //Create a state variable to zoom in on images
-  const [isZoomed, setIsZoomed] = useState({zoomState: false, index: 0});
-  useEffect(() => {
-    //retrigger css animation on state change
-    try {
-      const textTitle = document.getElementById('text-title');
-      textTitle.classList.remove('zoomed-title-text');
-      void textTitle.offsetWidth;
-      textTitle.classList.add('zoomed-title-text');
-      const textBody = document.getElementById('text-body');
-      textBody.classList.remove('zoomed-text');
-      void textBody.offsetWidth;
-      textBody.classList.add('zoomed-text')
 
-      console.log('Zoomed Photo is rendered');
-    }
-    catch {
-      console.log('Zoomed Photo is not rendered')
-    }
-  }, [isZoomed]);
+  var imageName = ''
+  for (var i in homeImage) {
+    imageName = i;
+
+  }
+  let directory = imageName.split('.')[0].slice(0, -1).toLowerCase()
+  let homeImagePath = `images/${directory}/${imageName}`
+  let imageDescription = homeImage[imageName]
+  let home = true
   
   return (
-    <div className="Home" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw'}}>
+    <div className="Home" style={{width: '100vw', height: '100vh'}}>
       <Helmet>
-        <style>{'body { background-color: #f6f6e8; }'}</style>
+        <style>{'body { background-color: #fcfcf6; }'}</style>
         <meta charSet="utf-8" />
         <title>Beko</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-
-      <TitleRow/>
-      <PageRow/>
-      <GridRow isZoomed={isZoomed} setIsZoomed={setIsZoomed}/>
-      { isZoomed.index != null && isZoomed.zoomState ? <ZoomedImage className='zoomed-photo' id='zoomed-photo' index={isZoomed.index} setIsZoomed={setIsZoomed} /> : null}
+      {/* left aligned flex column */}
+      <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
+        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
+          <Sidebar imageDescription={imageDescription} home={true}/>
+        </div>
+      </div>
+        <div style={{height:'100vh',width:'100vw', position: 'absolute', top: 0, right: 0}}>
+          <div style={{position: 'relative', marginLeft: '22em', marginTop: '4em', marginRight: '0em'}}>
+            <img src={homeImagePath} style={{position: 'relative', maxWidth: '100%', height:'45em', objectFit: 'scale-down', alignSelf: 'center'}}/>
+          </div>
+      </div>
     </div>
   );
 }

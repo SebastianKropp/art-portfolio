@@ -4,6 +4,12 @@ import './css/index.css';
 import Home from './components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import Lithographs from './components/Lithographs';
+import ScreenPrints from './components/ScreenPrints';
+import Intaglio from './components/Intaglio';
+import ReliefPrints from './components/ReliefPrints';
+import EcoPrints from './components/EcoPrints';
+import About from './components/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,10 +17,12 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/Gallery" element={<div />} />
-        <Route path="/About" element={<div />} />
-        <Route path="/Contact" element={<div />} />
-        <Route path="/Store" element={<div />} />
+        <Route path="/lithographs" element={<Lithographs/>} />
+        <Route path="/screenprints" element={<ScreenPrints/>} />
+        <Route path="/intaglio" element={<Intaglio/>} />
+        <Route path="/reliefprints" element={<ReliefPrints/>} />
+        <Route path="/ecoprints" element={<EcoPrints/>} />
+        <Route path="/about" element={<About/>} />
       </Routes>
     </Router>
   </React.StrictMode>
