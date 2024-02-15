@@ -1,6 +1,6 @@
 let homeImage = {
-   "litho2.jpg": {
-      "Title": "\'reaching-out\' 2022",
+    "intaglio0.jpg": {
+        "Title": "\'the wharf\’ 2023",
       },
 }
 

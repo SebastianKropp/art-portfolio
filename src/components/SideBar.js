@@ -19,27 +19,27 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
           </div>
           <div>
             <div className='Pages' onClick={() => (navigate('/lithographs'))}>
-              {'Lithographs'}
+              {'Lithography'}
             </div>
           </div>
           <div>
             <div className='Pages' onClick={() => (navigate('/screenprints'))}>
-              {'Screenprints (selected works)'}
+              {'Screenprint (selected works)'}
             </div>
           </div>
           <div>
             <div className='Pages' onClick={() => (navigate('/intaglio'))}>
-              {'Intaglio'}
+              {'Photo Intaglio'}
             </div>
           </div>
           <div>
             <div className='Pages' onClick={() => (navigate('/reliefprints'))}>
-              {'Relief Prints'}
+              {'Relief'}
             </div>
           </div>
           <div>
             <div className='Pages' style={{marginBottom: '20px'}} onClick={() => (navigate('/ecoprints'))}>
-              {'Eco Prints'}
+              {'Eco Print'}
             </div>
           </div>
           <div>
