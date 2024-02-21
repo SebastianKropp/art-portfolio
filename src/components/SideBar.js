@@ -75,7 +75,7 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
                   </div>
                   <div>
                     <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/screenprints'))}>
-                      {'Screenprint (selected works)'}
+                      {'Screenprint'}
                     </div>
                   </div>
                   <div>
@@ -129,7 +129,7 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
           </div>
           <div>
             <div className='Pages' onClick={() => (navigate('/screenprints'))}>
-              {'Screenprint (selected works)'}
+              {'Screenprint'}
             </div>
           </div>
           <div>
@@ -152,6 +152,11 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
               {'About'}
             </div>
           </div>
+          {/* <div>
+            <img style={{paddingTop: '2.5em', width: '4em'}} src={'images/beko.jpg'}/>
+          </div> */}
+
+          
       </div>
       <div style={{position: 'absolute', bottom: '4.5em', left: '60px', zIndex: 10}}>
       <div >
