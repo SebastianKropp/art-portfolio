@@ -32,10 +32,10 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
         }
         else {
             if (index !== currentImage) {
-                imageObjects.push(<img style={{opacity: '0', position: 'absolute'}} key={index} src={`images/${category}/${imageName}`} alt={'artpiece'} className='subImages'/>)
+                imageObjects.push(<img style={{opacity: '0', position: 'absolute'}} src={`images/${category}/${imageName}`} key={index} alt={'artpiece'} className='subImages'/>)
             }
             else {
-                imageObjects.push(<img id='change-animation' key={index} src={`images/${category}/${imageName}`} alt='artpiece' className='subImages'/>)
+                imageObjects.push(<img id='change-animation' src={`images/${category}/${imageName}`} key={index} alt='artpiece' className='subImages'/>)
             }
         }
     })
