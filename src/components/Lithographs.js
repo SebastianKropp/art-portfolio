@@ -24,7 +24,7 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
                   </div>
                 </div>
                 <div>
-                  <div style={{fontFamily: 'PT Sans', fontStyle: 'normal', lineHeight: '1.8em', color: 'rgb(91, 87, 72)', padding: '1.5px', marginTop: '0.5em', letterSpacing: '0.22px', fontWeight: '600', whiteSpace: 'pre-line', paddingBottom: '4em'}}>
+                  <div style={{fontFamily: 'PT Sans', fontStyle: 'normal', lineHeight: '1.8em', color: 'rgb(91, 87, 72)', padding: '1.5px', marginTop: '0.5em', letterSpacing: '0.22px', fontWeight: '400', whiteSpace: 'pre-line', paddingBottom: '4em', fontSize: '11px'}}>
                     {imageBody}
                 </div>
                 </div>
