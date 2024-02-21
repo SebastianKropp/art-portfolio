@@ -32,7 +32,6 @@ const Home = () => {
 
 
   if (isMobile) {
-    console.log('mobile detected')
     return (
       <div className="Home" style={{width: '100vw', height: '90vh'}}>
         {/* left aligned flex column */}

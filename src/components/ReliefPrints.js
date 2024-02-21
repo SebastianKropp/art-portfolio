@@ -7,7 +7,6 @@ import Sidebar from './SideBar';
 import { isMobile } from 'react-device-detect';
 const SelectedPhoto = ({imageName, category, currentImage}) =>{
     let imageObjects = []
-    console.log(imageName[0])
     imageName.forEach((imageName, index) => {
         if (isMobile) {
             let imageTitle = imageDescription[imageName]["Title"]
@@ -15,7 +14,7 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
             imageObjects.push(
             <>
                 <div style={{position: 'relative', justifyContent: 'center', textAlign: 'center'}}>
-                    <img src={`images/${category}/${imageName}`} alt='artpiece' className='subImagesMobile'/>
+                    <img src={`images/${category}/${imageName}`} alt='artpiece' key={index} className='subImagesMobile'/>
                 </div>
                 <div style={{bottom: '4.5em', left: '2em', zIndex: 10, width: '74%'}}>
                 <div style={{paddingTop: '1em'}}>
@@ -33,14 +32,13 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
         }
         else {
             if (index !== currentImage) {
-                imageObjects.push(<img style={{opacity: '0', position: 'absolute'}} src={`images/${category}/${imageName}`} alt='artpiece' className='subImages'/>)
+                imageObjects.push(<img style={{opacity: '0', position: 'absolute'}} key={index} src={`images/${category}/${imageName}`} alt='artpiece' className='subImages'/>)
             }
             else {
-                imageObjects.push(<img id='change-animation' src={`images/${category}/${imageName}`} alt='artpiece' className='subImages'/>)
+                imageObjects.push(<img id='change-animation' key={index} src={`images/${category}/${imageName}`} alt='artpiece' className='subImages'/>)
             }
         }
     })
-    console.log(imageObjects)
     return (
         <>        
         {imageObjects}
@@ -73,7 +71,6 @@ const ReliefPrints = () => {
 
     useEffect(() => {
         if (!isMobile) {
-        console.log('Changing classes')
         const textTitle = document.getElementById('change-animation');
         textTitle.classList.add('fade');
         setTimeout(() => {
@@ -85,7 +82,6 @@ const ReliefPrints = () => {
     }, [currentImage, imagePath])
 
     if (isMobile) {
-        console.log('mobile detected')
         return (
           <div className="Home" style={{width: '100vw', height: '90vh'}}>
             {/* left aligned flex column */}

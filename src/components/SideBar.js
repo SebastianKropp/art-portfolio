@@ -24,15 +24,14 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
 
     useEffect(() => {
       if (isMobile) {
-        console.log("Wow triggered much?")
         //modify className of menuBar and menuBarText
         let menuBar = document.getElementById('menuBar')
         let menuBarText = document.getElementById('menuBarText')
         if (isMenuOpen) {
             menuBar.className = 'menuBarClosed'
             menuBarText.className = 'menuBarTextClosed'
-            //menuBar.style.animation = 'none'
-            //menuBar.style.animation = 'slideIn 1s cubic-bezier(0.17, 0.04, 0.03, 0.94)'
+            menuBar.style.animation = 'none'
+            menuBar.style.animation = 'slideIn 1s cubic-bezier(0.17, 0.04, 0.03, 0.94)'
             setRemoveBar(true)
 
         }
