@@ -3,7 +3,7 @@ let aboutDescription =
 
 Throughout her time at UCSC, Delaney honed her craft with a particular focus on printmaking, focusing on various techniques to bring her artistic visions to life. Her affinity for the medium led her to explore the realms of intaglio, eco prints, relief prints, and screen prints, each avenue offering a unique canvas for her creativity.\n
 
-Delaney\’s journey through printmaking emerges as a channel woven with the essence of nature's cycles—imbued with the beauty of impermanence and the interplay of decay and growth. With meticulous attention to detail and an unyielding dedication to her craft, she infuses her emotions, reflections, and encounters with the natural world onto the canvas, transmuting mundane instants into unforgettable impressions.`
+Delaney’s journey through printmaking emerges as a channel woven with the essence of nature's cycles—imbued with the beauty of impermanence and the interplay of decay and growth. With meticulous attention to detail and an unyielding dedication to her craft, she infuses her emotions, reflections, and encounters with the natural world onto the canvas, transmuting mundane instants into unforgettable impressions.`
 
 
 

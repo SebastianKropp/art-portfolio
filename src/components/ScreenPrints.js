@@ -1,7 +1,6 @@
 import '../css/App.css';
 
 import React, { useEffect, useState } from 'react';
-import {Helmet} from "react-helmet";
 import { imageDescription } from '../imageDescription.js';
 import { isMobile } from 'react-device-detect';
 import Sidebar from './SideBar.js';
@@ -16,16 +15,16 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
             imageObjects.push(
             <>
                 <div style={{position: 'relative', justifyContent: 'center', textAlign: 'center'}}>
-                    <img src={`images/${category}/${imageName}`} className='subImagesMobile'/>
+                    <img src={`images/${category}/${imageName}`} className='subImagesMobile' alt='artpiece'/>
                 </div>
                 <div style={{bottom: '4.5em', left: '2em', zIndex: 10, width: '74%'}}>
                 <div style={{paddingTop: '1em'}}>
-                  <div style={{fontFamily: 'bricolage-grotesque', fontStyle: 'bold', lineHeight: '1.8em', fontSize: '11px', color: 'rgb(91, 87, 72)', padding: '1.5px', fontWeight: '400', letterSpacing: '0.8px', fontWeight: '1000', fontSize: '11px'}}>
+                  <div style={{fontFamily: 'bricolage-grotesque', fontStyle: 'bold', lineHeight: '1.8em', color: 'rgb(91, 87, 72)', padding: '1.5px', letterSpacing: '0.8px', fontWeight: '1000', fontSize: '11px'}}>
                     {imageTitle}
                   </div>
                 </div>
                 <div>
-                  <div style={{fontFamily: 'PT Sans', fontStyle: 'normal', lineHeight: '1.8em', fontSize: '11px', color: 'rgb(91, 87, 72)', padding: '1.5px', marginTop: '0.5em', fontWeight: '400', letterSpacing: '0.22px', fontWeight: '600', whiteSpace: 'pre-line', paddingBottom: '4em'}}>
+                  <div style={{fontFamily: 'PT Sans', fontStyle: 'normal', lineHeight: '1.8em', fontSize: '11px', color: 'rgb(91, 87, 72)', padding: '1.5px', marginTop: '0.5em',letterSpacing: '0.22px', fontWeight: '600', whiteSpace: 'pre-line', paddingBottom: '4em'}}>
                     {imageBody}
                 </div>
                 </div>
@@ -33,11 +32,11 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
             </>)
         }
         else {
-            if (index != currentImage) {
-                imageObjects.push(<img style={{opacity: '0', position: 'absolute'}} src={`images/${category}/${imageName}`} className='subImages'/>)
+            if (index !== currentImage) {
+                imageObjects.push(<img style={{opacity: '0', position: 'absolute'}} src={`images/${category}/${imageName}`} alt={'artpiece'} className='subImages'/>)
             }
             else {
-                imageObjects.push(<img id='change-animation' src={`images/${category}/${imageName}`} className='subImages'/>)
+                imageObjects.push(<img id='change-animation' src={`images/${category}/${imageName}`} alt='artpiece' className='subImages'/>)
             }
         }
     })
@@ -50,7 +49,6 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
 }
 
 const ScreenPrints = () => {
-    let home = false
     var imageName = []
     let category = 'screenprint'
 
@@ -66,10 +64,10 @@ const ScreenPrints = () => {
     let description = imageDescription[imageName[currentImage]]
 
     const handleButtonClick = (value) => {
-        if (currentImage != 0 && value == -1) {
+        if (currentImage !== 0 && value === -1) {
             setCurrentImage(currentImage - 1)
         }
-        else if (currentImage != imageName.length - 1 && value == 1) {
+        else if (currentImage !== imageName.length - 1 && value === 1) {
             setCurrentImage(currentImage + 1)
         }
     }
@@ -85,21 +83,11 @@ const ScreenPrints = () => {
         }, 250)
         }   
         
-    }, [currentImage])
-
-    let imageTitle = imageDescription["Title"]
-    let imageBody = imageDescription?.["Body"]? imageDescription["Body"] : null;
-
+    }, [currentImage, imagePath])
     if (isMobile) {
         console.log('mobile detected')
         return (
           <div className="Home" style={{width: '100vw', height: '90vh'}}>
-            <Helmet>
-              <style>{'body { background-color: #fcfcf6; }'}</style>
-              <meta charSet="utf-8" />
-              <link rel="canonical" href="https://delaneystewart.com" />
-            </Helmet>
-            
             {/* left aligned flex column */}
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100vw', paddingLeft: ''}}>
               <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingLeft: ''}}>
@@ -112,12 +100,6 @@ const ScreenPrints = () => {
       }
     return (
         <div className="Home" style={{width: '100vw', height: '100vh'}}>
-        <Helmet>
-            <style>{'body { background-color: #fcfcf6; }'}</style>
-            <meta charSet="utf-8" />
-            <title>Beko</title>
-            <link rel="canonical" href="http://mysite.com/example" />
-        </Helmet>
         {/* left aligned flex column */}
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
@@ -125,7 +107,7 @@ const ScreenPrints = () => {
             </div>
         </div>
         <div style={{height:'100vh',width:'100vw', position: 'absolute', top: 0, right: 0}}>
-            <div style={{position: 'relative', marginLeft: '18em', marginTop: '4em', marginRight: '0em', justifyContent: 'center', textAlign: 'center', marginRight:'7em'}}>
+            <div style={{position: 'relative', marginLeft: '18em', marginTop: '4em', justifyContent: 'center', textAlign: 'center', marginRight:'7em'}}>
                 <SelectedPhoto imageName={imageName} category={category} currentImage={currentImage}/>
             </div>
         </div>

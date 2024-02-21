@@ -1,8 +1,6 @@
 import {useNavigate} from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 import { useState, useEffect, useRef } from 'react';
-import { useLayoutEffect } from 'react';
-//import css
 import '../css/App.css';
 
 function useFirstRender() {
@@ -10,7 +8,8 @@ function useFirstRender() {
 
   useEffect(() => {
     firstRender.current = false;
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [firstRender]);
 
   return firstRender.current;
 }
@@ -32,8 +31,8 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
         if (isMenuOpen) {
             menuBar.className = 'menuBarClosed'
             menuBarText.className = 'menuBarTextClosed'
-            menuBar.style.animation = 'none'
-            menuBar.style.animation = 'slideIn 1s cubic-bezier(0.17, 0.04, 0.03, 0.94)'
+            //menuBar.style.animation = 'none'
+            //menuBar.style.animation = 'slideIn 1s cubic-bezier(0.17, 0.04, 0.03, 0.94)'
             setRemoveBar(true)
 
         }
@@ -44,6 +43,7 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
             }
             //wait for animation
             setTimeout(() => {
+              menuBar.style.animation = 'none'
               menuBar.className = 'menuBarOpen'
               menuBarText.className = 'menuBarTextOpen'
               setRemoveBar(false)
@@ -104,9 +104,9 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
             </div>
           </div>
           <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center'}}>
-            <div onClick={() => (navigate('/'))} style={{cursor: 'pointer', fontFamily: 'florenescans', fontSize: '20px', fontStyle: 'normal', letterSpacing: '0.2em', lineHeight: '1.4em', fontWeight: '500', textTransform: 'uppercase', color: '#6d674f', whiteSpace: 'pre-line', paddingBottom: '1em', paddingTop: '3em'}}>
+            <h1 onClick={() => (navigate('/'))} style={{cursor: 'pointer', fontFamily: 'florenescans', fontSize: '20px', fontStyle: 'normal', letterSpacing: '0.2em', lineHeight: '1.4em', fontWeight: '500', textTransform: 'uppercase', color: '#6d674f', whiteSpace: 'pre-line', paddingBottom: '1em', paddingTop: '3em'}}>
               {'Delaney Stewart'}
-            </div>
+            </h1>
             </div>
         </>
             )
@@ -114,9 +114,9 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
     return(
       <>
       <div style={{display: 'flex', zIndex: '10', flexDirection: 'column', textAlign: 'center', justifyContent: 'center', alignItems: 'center', paddingTop: '4em', paddingLeft: '81px' }}>
-          <div onClick={() => (navigate('/'))} style={{cursor: 'pointer', fontFamily: 'florenescans', fontSize: '20px', fontStyle: 'normal', letterSpacing: '0.2em', lineHeight: '1.4em', fontWeight: '500', textTransform: 'uppercase', color: '#6d674f', whiteSpace: 'pre-line', paddingBottom: '30px'}}>
+          <h1 onClick={() => (navigate('/'))} style={{cursor: 'pointer', fontFamily: 'florenescans', fontSize: '20px', fontStyle: 'normal', letterSpacing: '0.2em', lineHeight: '1.4em', fontWeight: '500', textTransform: 'uppercase', color: '#6d674f', whiteSpace: 'pre-line', paddingBottom: '30px'}}>
             {'Delaney \nStewart'}
-          </div>
+          </h1>
           <div>
             <div className='Pages' onClick={() => (navigate('/'))}>
               {'Home'}
@@ -153,19 +153,19 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
             </div>
           </div>
           <div>
-            <img style={{paddingTop: '1.75em', width: '6em'}} src={'images/beko.jpg'}/>
+            <img style={{paddingTop: '1.75em', width: '6em'}} src={'images/beko.jpg'} alt='Beko'/>
           </div>
 
           
       </div>
       <div style={{position: 'absolute', bottom: '4.5em', left: '60px', zIndex: 10}}>
       <div >
-        <div style={{fontFamily: 'bricolage-grotesque', fontStyle: 'bold', lineHeight: '1.8em', fontSize: '11px', color: 'rgb(91, 87, 72)', padding: '1.5px', fontWeight: '400', letterSpacing: '0.8px', fontWeight: '1000', fontSize: '11px'}}>
+        <div style={{fontFamily: 'bricolage-grotesque', fontStyle: 'bold', lineHeight: '1.8em', color: 'rgb(91, 87, 72)', padding: '1.5px', letterSpacing: '0.8px', fontWeight: '1000', fontSize: '11px'}}>
           {imageTitle}
         </div>
       </div>
       {imageBody ? <div>
-        <div style={{fontFamily: 'PT Sans', fontStyle: 'normal', lineHeight: '1.8em', fontSize: '11px', color: 'rgb(91, 87, 72)', padding: '1.5px', marginTop: '0.5em', fontWeight: '400', letterSpacing: '0.22px', fontWeight: '600', whiteSpace: 'pre-line'}}>
+        <div style={{fontFamily: 'PT Sans', fontStyle: 'normal', lineHeight: '1.8em', fontSize: '11px', color: 'rgb(91, 87, 72)', padding: '1.5px', marginTop: '0.5em', letterSpacing: '0.22px', fontWeight: '600', whiteSpace: 'pre-line'}}>
           {imageBody}
         </div>
       </div> : null}

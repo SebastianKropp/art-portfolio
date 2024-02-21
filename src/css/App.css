@@ -21,7 +21,7 @@ body {
   width: 100%; 
   text-align: center; 
   background-color: #6f6b5d;
-  /* animation: slideIn 0.5s cubic-bezier(0.17, 0.04, 0.03, 0.94); Animation for zooming in */
+  animation: slideIn 0.5s cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 .menuBarTextClosed {
   cursor: pointer; 
