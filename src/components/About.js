@@ -3,7 +3,7 @@ import '../css/App.css';
 import React, { useState } from 'react';
 import {Helmet} from "react-helmet";
 import aboutDescription from '../aboutDescription.js';
-
+import { isMobile } from 'react-device-detect';
 import Sidebar from './SideBar';
 
 const About = () => {
@@ -11,9 +11,32 @@ const About = () => {
     var imageName = ''
     let category = 'about'
 
-
     let imagePath = `images/about/about.jpg`
-
+    if (isMobile) {
+        return (
+            <div className="Home" style={{width: '100vw', height: '90vh'}}>
+        <Helmet>
+            <style>{'body { background-color: #fcfcf6; }'}</style>
+            <meta charSet="utf-8" />
+            <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+        {/* left aligned flex column */}
+        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100vw',}}>
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: 'auto'}}>
+            <Sidebar imageDescription={''} home={true} handleButtonClick={''} />
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', paddingLeft: ''}}>
+            <div style={{position: 'relative', justifyContent: 'center', textAlign: 'center'}}>
+            <img src={'images/about/aboutMobile.jpg'} style={{position: 'relative', width: '100%', height: '15em', objectFit: 'scale-down', alignSelf: 'center', display: 'inline-block', paddingTop: '1em',  paddingBottom: '2em',marginRight:'39.5em'}}/>
+            </div>
+            <div className="Pages" style={{whiteSpace: 'pre-line', width: '65%', fontSize: '15px', paddingBottom: '2em'}}>
+            {aboutDescription}
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        )
+    }
     return (
         <div className="Home" style={{width: '100vw', height: '100vh'}}>
         <Helmet>

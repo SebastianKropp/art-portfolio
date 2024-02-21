@@ -1,11 +1,66 @@
 
+:root {
+  --doc-height: 100%;
+ }
+
 body {
   width: '100vw';
   height: '100vh';
+  background-color: #fcfcf6;
   overflow-x: hidden; /* Hide horizontal scrollbar */
+  height: var(--doc-height);
 }
 
+.menuBarOpen {
+  width: 100%; 
+  text-align: center; 
+  background-color: #fcfcf6;
+}
+
+.menuBarClosed {
+  width: 100%; 
+  text-align: center; 
+  background-color: #6f6b5d;
+  /* animation: slideIn 0.5s cubic-bezier(0.17, 0.04, 0.03, 0.94); Animation for zooming in */
+}
+.menuBarTextClosed {
+  cursor: pointer; 
+  font-family: florenescans; 
+  font-size: 0.75em; 
+  font-style: normal;
+  letter-spacing: 0.2em;
+  line-height: 1.4em; 
+  font-weight: 500; 
+  text-transform: uppercase;
+  color: #FCFCF7B3; 
+  white-space: pre-line; 
+  padding-top: 1.25em; 
+  padding-bottom: 1.25em;
+}
+.menuBarTextOpen {
+  cursor: pointer; 
+  font-family: florenescans; 
+  font-size: 0.75em; 
+  font-style: normal;
+  letter-spacing: 0.2em;
+  line-height: 1.4em; 
+  font-weight: 500; 
+  text-transform: uppercase;
+  color: #6d674f; 
+  white-space: pre-line; 
+  padding-top: 1.25em; 
+  padding-bottom: 1.25em;
+}
+.menuOpen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fcfcf6;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  height: var(--doc-height);
+}
+ 
 root {
+  background-color: #fcfcf6;
   width: '100vw';
   height: '100vh';
   overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -65,6 +120,15 @@ html {
   display: inline-block;
   animation-name: none
 }
+
+.subImagesMobile {
+  position: relative; 
+  max-width: 75%; 
+  object-fit: scale-down; 
+  align-self: center; 
+  display: inline-block;
+  animation-name: none
+}
 .subImages2 {
   position: relative; 
   max-width: 100%; 
@@ -76,6 +140,17 @@ html {
 }
 .subImages.fade {
     animation: fadeIn 0.25s ease-in;
+}
+
+.PagesMobile {
+  font-family: 'PT Sans'; 
+  font-style: normal;
+  line-height: 1.8em;
+  font-size: 1em; 
+  color: #FCFCF7B3;
+  padding: 0.4em;
+  font-weight: 590;
+  cursor: pointer;
 }
 
 .Pages {
@@ -94,6 +169,20 @@ html {
   animation: changeColor 0.25s ease; /* Animation for zooming in */
   cursor: pointer;
   color: rgb(22, 21, 21);
+
+}
+
+.OtherPagesMobile {
+  font-family: 'proxima-nova'; 
+  cursor: pointer;
+  font-style: normal;
+  line-height: 1.8em;
+  font-size: 1em; 
+  color: #FCFCF7B3;
+  padding: 0.4em;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  padding-bottom: 1em
 
 }
 
@@ -264,6 +353,33 @@ html {
   }
   to {
     opacity: 1; /* Final opacity */
+    font-size: 12pt;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0.5; /* Initial opacity */
+    font-size: 12pt;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1; /* Final opacity */
+    font-size: 12pt;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1; /* Initial opacity */
+    opacity: 1; /* Initial opacity */
+    font-size: 12pt;
+  }
+  to {
+    opacity: 0; /* Final opacity */
+    transform: translateY(-100%);
+    opacity: 0; /* Final opacity */
     font-size: 12pt;
   }
 }
