@@ -152,9 +152,9 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
               {'About'}
             </div>
           </div>
-          {/* <div>
-            <img style={{paddingTop: '2.5em', width: '4em'}} src={'images/beko.jpg'}/>
-          </div> */}
+          <div>
+            <img style={{paddingTop: '1.75em', width: '4em'}} src={'images/beko.jpg'}/>
+          </div>
 
           
       </div>
