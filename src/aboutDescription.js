@@ -1,9 +1,8 @@
 let aboutDescription = 
-`Delaney Stewart is a multifaceted artist whose passion for printmaking has been a cornerstone of her creative journey. Delaney began this journey at the University of California, Santa Cruz (UCSC). There, she pursued a double major in art and language studies, earning double honors—a testament to her dedication.\n
+`Delaney Stewart is an interdisciplinary artist and printmaker based in Leucadia, California. Through her artwork, she seeks to cultivate a deep connection between the viewer and the natural world by employing a variety of botanical and organic forms. Her pieces not only highlight humanity's interconnectedness with nature but also shed light on the fragmentation between the two, inspiring ecological consciousness and action. She sees climate justice as an intersectional movement, one that strives to be accessible and inclusive, and recognizes the importance of collective liberation.   
 
-Throughout her time at UCSC, Delaney honed her craft with a particular focus on printmaking, focusing on various techniques to bring her artistic visions to life. Her affinity for the medium led her to explore the realms of intaglio, eco prints, relief prints, and screen prints, each avenue offering a unique canvas for her creativity.\n
-
-Delaney’s journey through printmaking emerges as a channel woven with the essence of nature's cycles—imbued with the beauty of impermanence and the interplay of decay and growth. With meticulous attention to detail and an unyielding dedication to her craft, she infuses her emotions, reflections, and encounters with the natural world onto the canvas, transmuting mundane instants into unforgettable impressions.`
+Delaney is a recent graduate from the University of California, Santa Cruz, where she earned her Bachelor of Arts degree with dual majors in Fine Arts and Language, graduating with honors in both. Her academic journey was marked by a strong focus on Japanese Language Studies and Printmaking, drawing inspiration from both Photo-based and traditional print techniques. She has been awarded the Eduardo Carrillo Scholarship in pursuit of exploring printmaking, sustainability, and intercultural knowledge. As an artist, Delaney is deeply committed to using her platform to question our relationship with the natural world to create a more knowledgeable, sustainable, and reciprocal future. 
+`
 
 
 

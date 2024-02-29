@@ -83,7 +83,7 @@ const Home = () => {
       </div>
         <div style={{height:'100vh',width:'100vw', position: 'absolute', top: 0, right: 0}}>
           <div style={{position: 'relative', marginLeft: '23em', marginTop: '2em', marginRight: '0em'}}>
-            <img src={homeImagePath} style={{position: 'relative', maxWidth: '100%', height:'45em', objectFit: 'scale-down', alignSelf: 'center'}}  alt='artpiece'/>
+            <img src={homeImagePath} style={{position: 'relative', maxWidth: '100%', height:'45em', objectFit: 'scale-down', alignSelf: 'center',}}  alt='artpiece'/>
           </div>
       </div>
     </div>
