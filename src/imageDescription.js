@@ -36,10 +36,18 @@ let imageDescription =
     "Body": "photo-intaglio, digital chine collé 10\" x 10\""
     },
     "intaglio3.jpg": {
+        "Title": "'green going through' 2023",
+        "Body": "photogravure, 30” x 22”"
+    },
+    "intaglio4.jpg": {
+        "Title": "'the rising of three green moons' 2023",
+        "Body": "photogravure, digital chine collé 30’’x 22’’"
+    },
+    "intaglio5.jpg": {
     "Title": "'shoreline' 2023",
     "Body": "photogravure, digital chine collé 10\" x 12\""
     },
-    "intaglio4.jpg": {
+    "intaglio6.jpg": {
     "Title": "'rising of three green moons (III) ’ 2023",
     "Body": "photogravure, 8”x17\"",
     },
@@ -76,17 +84,46 @@ let imageDescription =
     "Body": "californian poppy + daisy ecoprint 8\"x 10\""
     },
     "ecoprint3.jpg": {
+        "Title": "'untitled’ 2023",
+        "Body": "japanese maple + lavender ecoprint 6\"x 8\""
+    },
+    "ecoprint4.jpg": {
     "Title": "'untitled' 2023",
     "Body": "wisteria, poppy, + rosemary ecoprint 6\"x 8\""
     },
-    "ecoprint4.jpg": {
-    "Title": "'untitled’ 2023",
-    "Body": "japanese maple + lavender ecoprint 6\"x 8\""
+    "ecoprint5.jpg": {
+    "Title": "'nanten' 2024",
+    "Body": "cyanotype, 6\" x 8\""
     },
-    "relief0.jpg": {
-    "Title": "'heaven on earth' 2023",
-    "Body": "relief woodcut 15”x22”"
-    }
+    "relief1.jpg": {
+    "Title": "'synthesis' (heaven pattern 1) 2023",
+    "Body": "woodcut, 25\" x 25\""
+    },
+    "relief2.jpg": {
+        "Title": "'circulation' (gingko pattern 2) 2023",
+        "Body": "woodcut, 25\" x 25\""
+    },
+    "relief3.jpg": {
+        "Title": "'tongues' (penstemon pattern 3), 2023",
+        "Body": "woodcut, 40\" x 26\""
+    },
+    "relief4.jpg": {
+        "Title": "'heaven on earth' 2023",
+        "Body": "relief woodcut 15”x22”"
+    },
+    "relief5.jpg": {
+        "Title": "'bingsu' 2021",
+        "Body": "linocut, 10\" x 12\""
+    },
+    "relief6.jpg": {
+        "Title": "'kiku ocean' 2023",
+        "Body": "woodcut, 6\" x 8\""
+    },
+    "relief7.jpg": {
+        "Title": "'four mile beach' 2023",
+        "Body": "8 layer mokuhanga, 8\" x 12\""
+    },
+    
 }
 
 export {imageDescription, homeImage};
