@@ -33,15 +33,19 @@ let imageDescription =
     },
     "intaglio2.jpg": {
     "Title": "'maybirds’ 2023",
-    "Body": "photo-intaglio, digital chine collé 10\" x 10\""
+    "Body": "intaglio, digital chine collé 10\" x 10\""
+    },
+    "intaglio5.jpg": {
+        "Title": "'shoreline' 2023",
+        "Body": "photogravure, digital chine collé 10\" x 12\""
     },
     "intaglio3.jpg": {
-        "Title": "'green going through' 2023",
-        "Body": "photogravure, 30” x 22”"
-    },
-    "intaglio4.jpg": {
         "Title": "'the rising of three green moons' 2023",
         "Body": "photogravure, digital chine collé 30’’x 22’’"
+    },
+    "intaglio4.jpg": {
+        "Title": "'green going through' 2023",
+        "Body": "photogravure, 30” x 22”"
     },
     "intaglio5.jpg": {
     "Title": "'shoreline' 2023",
@@ -49,10 +53,6 @@ let imageDescription =
     },
     "intaglio6.jpg": {
     "Title": "'rising of three green moons (III) ’ 2023",
-    "Body": "photogravure, 8”x17\"",
-    },
-    "intaglio5.jpg": {
-    "Title": "'rising of three green moons (II) ’ 2023",
     "Body": "photogravure, 8”x17\"",
     },
     "intaglio6.jpg": {
