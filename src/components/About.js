@@ -38,12 +38,12 @@ const About = () => {
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
             
             <img src={imagePath} alt='biophoto' style={{position: 'relative', width: '100%', height:'45em', objectFit: 'cover', objectPosition: '38em 10em', marginTop: '-6em', right: '20em'}}/>
-        <div className="Pages" style={{marginTop: '3em', width: '55%', marginLeft: '19em', whiteSpace: 'pre-line', marginBottom: '0.25em', fontSize: '15px', textAlign: 'center'}}>
+        <div className="Pages" style={{marginTop: '3em', width: '55%', marginLeft: '19em', whiteSpace: 'pre-line', marginBottom: '0.25em', fontSize: '15px', textAlign: 'left'}}>
         {`Delaney Stewart
         Artist • Printmaker`}
 
         </div>
-        <div className="Pages" style={{marginTop: '1em', width: '55%', marginLeft: '19em', whiteSpace: 'pre-line', marginBottom: '3em', fontSize: '15px', textAlign: 'center'}}>
+        <div className="Pages" style={{marginTop: '1em', width: '55%', marginLeft: '19em', whiteSpace: 'pre-line', marginBottom: '3em', fontSize: '15px', textAlign: 'left'}}>
             {aboutDescription}
         </div>
         </div>
