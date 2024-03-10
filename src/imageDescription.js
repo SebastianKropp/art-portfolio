@@ -71,13 +71,21 @@ let imageDescription =
     "Title": "'mandarin’ 2023",
     "Body": "four color screenprint 15\"x 22”"
     },
+    "ecoprint5.jpg": {
+        "Title": "'nanten' 2024",
+        "Body": "cyanotype, 6\" x 8\""
+    },
+    "ecoprint4.jpg": {
+        "Title": "'untitled' 2023",
+        "Body": "wisteria, poppy, + rosemary ecoprint 6\"x 8\""
+    },
+    "ecoprint1.jpg": {
+        "Title": "'untitled’ 2023",
+        "Body": "yarrow + lavender ecoprint 6\"x 22\""
+    },
     "ecoprint0.jpg": {
     "Title": "'untitled’ 2023",
     "Body": "rosemary, clover, + lavender ecoprint 4\"x 22\""
-    },
-    "ecoprint1.jpg": {
-    "Title": "'untitled’ 2023",
-    "Body": "yarrow + lavender ecoprint 6\"x 22\""
     },
     "ecoprint2.jpg": {
     "Title": "'untitled’ 2023",
@@ -86,14 +94,6 @@ let imageDescription =
     "ecoprint3.jpg": {
         "Title": "'untitled’ 2023",
         "Body": "japanese maple + lavender ecoprint 6\"x 8\""
-    },
-    "ecoprint4.jpg": {
-    "Title": "'untitled' 2023",
-    "Body": "wisteria, poppy, + rosemary ecoprint 6\"x 8\""
-    },
-    "ecoprint5.jpg": {
-    "Title": "'nanten' 2024",
-    "Body": "cyanotype, 6\" x 8\""
     },
     "relief1.jpg": {
     "Title": "'synthesis' (heaven pattern 1) 2023",
