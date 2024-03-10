@@ -40,28 +40,28 @@ let imageDescription =
         "Body": "photogravure, digital chine collé 10\" x 12\""
     },
     "intaglio3.jpg": {
-        "Title": "'the rising of three green moons' 2023",
+        "Title": "'rising of three green moons' 2023",
         "Body": "photogravure, digital chine collé 30’’x 22’’"
     },
     "intaglio4.jpg": {
         "Title": "'green going through' 2023",
         "Body": "photogravure, 30” x 22”"
     },
-    "intaglio5.jpg": {
-    "Title": "'shoreline' 2023",
-    "Body": "photogravure, digital chine collé 10\" x 12\""
-    },
     "intaglio6.jpg": {
-    "Title": "'rising of three green moons (III) ’ 2023",
-    "Body": "photogravure, 8”x17\"",
-    },
-    "intaglio6.jpg": {
-    "Title": "'green going through (I) ’ 2023",
+    "Title": "'rising of three green moons (I) ’ 2023",
     "Body": "photogravure, 8”x17\"",
     },
     "intaglio7.jpg": {
-    "Title": "'green going through (III) ’ 2023",
+    "Title": "'rising of three green moons (II) ’ 2023",
     "Body": "photogravure, 8”x17\"",
+    },
+    "intaglio8.jpg": {
+        "Title": "'green going through (I) ’ 2023",
+        "Body": "photogravure, 8”x17\"",
+    },
+    "intaglio9.jpg": {
+        "Title": "'green going through (III) ’ 2023",
+        "Body": "photogravure, 8”x17\"",
     },
     "screenprint0.jpg": {
     "Title": "'japanese lotus’ 2023",
