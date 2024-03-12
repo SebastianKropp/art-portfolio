@@ -23,17 +23,17 @@ let imageDescription =
     "Title": "'one-leg quail’ 2022",
     "Body": "lithograph, 8”x10”",
     },
+    "intaglio2.jpg": {
+        "Title": "'maybirds’ 2023",
+        "Body": "intaglio, digital chine collé 10\" x 10\""
+    },
+    "intaglio0.jpg": {
+        "Title": "'the wharf’ 2023",
+        "Body": "photogravure, digital chine collé 10\" x 12\""
+    },
     "intaglio1.jpg": {
     "Title": "'the wharf’ 2023",
     "Body": "photogravure 10\" x 12\""
-    },
-    "intaglio0.jpg": {
-    "Title": "'the wharf’ 2023",
-    "Body": "photogravure, digital chine collé 10\" x 12\""
-    },
-    "intaglio2.jpg": {
-    "Title": "'maybirds’ 2023",
-    "Body": "intaglio, digital chine collé 10\" x 10\""
     },
     "intaglio5.jpg": {
         "Title": "'shoreline' 2023",
