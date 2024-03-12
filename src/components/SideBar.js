@@ -93,10 +93,13 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
                     </div>
                   </div>
                   <div>
-                    <div className='OtherPagesMobile' onClick={() => (navigate('/about'))}>
+                    <div className='OtherPagesMobile' style={{marginTop: '0em'}} onClick={() => (navigate('/about'))}>
                       {'About'}
                     </div>
                   </div>
+                  <div className='PagesMobile' style={{position: 'relative', paddingBottom: '2em', opacity: '0.5', textAlign: 'center', fontSize: '7pt'}}>
+          Designed by Sebastian Kropp
+        </div>
                   </div>
                   : null}
                 </div>
@@ -151,6 +154,7 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
               {'About'}
             </div>
           </div>
+          
           <div>
             <img style={{paddingTop: '1.75em', width: '6em'}} src={'images/beko.jpg'} alt='Beko'/>
           </div>

@@ -52,6 +52,9 @@ const About = () => {
         </div>
         </div>
         </div>
+        <div className='Pages' style={{position: 'absolute', 'bottom': 0, 'right': 0, padding: '1em', paddingRight: '2em', opacity: '0.5'}}>
+          Designed by Sebastian Kropp
+        </div>
         </div>
         
 
