@@ -3,6 +3,7 @@ import '../css/App.css';
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import { homeImage } from '../imageDescription.js';
+import { imageDescription } from '../imageDescription.js';
 
 import Sidebar from './SideBar';
 const SelectedPhoto = ({imageName, category, currentImage}) =>{
@@ -53,10 +54,9 @@ const Home = () => {
           imageName.push(i)
   }
 
-  let imageDescription = homeImage[imageName]
+  let imageDescriptions = homeImage[imageName]
   let home = true
   let imageTitle =  "'japanese lotus’ 2023"
-  let imageBody = imageDescription?.["Body"]? imageDescription["Body"] : null;
   function handleButtonClick (value)  {
     return
   }
@@ -70,26 +70,22 @@ const Home = () => {
 
 
   if (isMobile) {
+    let imageBody = imageDescription["screenprint0.jpg"]["Body"]
     return (
       <div className="Home" style={{width: '100vw', height: '90vh'}}>
         {/* left aligned flex column */}
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
           <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingLeft: ''}}>
-            <Sidebar imageDescription={imageDescription} home={true}/>
+            <Sidebar imageDescription={imageBody} home={true}/>
             <div style={{textAlign: 'center', }}>
               <img src={'images/screenprint/screenprint0.jpg'}  alt='artpiece' style={{position: 'relative', maxWidth: '80%',maxHeight: '60%', paddingTop: '1em', objectFit: 'scale-down', alignSelf: 'center'}}/>
             </div>
             <div style={{bottom: '4.5em', left: '60px', zIndex: 10}}>
-            <div style={{paddingTop: '1.5em'}}>
-              <div style={{fontFamily: 'bricolage-grotesque', fontStyle: 'bold', lineHeight: '1.8em', color: 'rgb(91, 87, 72)', padding: '1.5px', letterSpacing: '0.8px', fontWeight: '1000', fontSize: '11px'}}>
+            <div style={{paddingTop: '1em'}}>
+              <div style={{fontFamily: 'bricolage-grotesque', fontStyle: 'bold', lineHeight: '1.8em', color: 'rgb(91, 87, 72)', padding: '1.5px', letterSpacing: '0.8px', fontWeight: '1000', fontSize: '11px', alignText: 'center'}}>
                 {imageTitle}
               </div>
             </div>
-            {imageBody ? <div>
-              <div style={{fontFamily: 'PT Sans', fontStyle: 'normal', lineHeight: '1.8em', fontSize: '11px', color: 'rgb(91, 87, 72)', padding: '1.5px', marginTop: '0.5em', letterSpacing: '0.22px', fontWeight: '600', whiteSpace: 'pre-line'}}>
-                {imageBody}
-              </div>
-            </div> : null}
             {!home ? 
             <div style={{display: 'flex', flexDirection: 'row', zIndex: '10', marginTop: '0.5em'}}>
               <div className='OtherPages' onClick={() => (handleButtonClick(-1))}>
@@ -116,7 +112,7 @@ const Home = () => {
       {/* left aligned flex column */}
       <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
         <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
-          <Sidebar imageDescription={imageDescription} home={true}/>
+          <Sidebar imageDescription={imageDescriptions} home={true}/>
           </div>
         </div>
         <div style={{height:'100vh',width:'100vw', position: 'absolute', top: 0, right: 0}}>
