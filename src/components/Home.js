@@ -5,16 +5,54 @@ import { isMobile } from 'react-device-detect';
 import { homeImage } from '../imageDescription.js';
 
 import Sidebar from './SideBar';
-
+const SelectedPhoto = ({imageName, category, currentImage}) =>{
+  let imageObjects = []
+  console.log(imageName)
+  imageName.forEach((imageName, index) => {
+      if (isMobile) {
+          let imageTitle = homeImage[imageName]["Title"]
+          let imageBody = homeImage?.[imageName]?.["Body"]
+          imageObjects.push(
+          <>
+              <div style={{position: 'relative', justifyContent: 'center', textAlign: 'center'}}>
+                  <img src={`images/${category}/${imageName}`} alt='artpiece' key={index} className='subImagesMobile'/>
+              </div>
+              <div style={{bottom: '4.5em', left: '2em', zIndex: 10, width: '74%'}}>
+              <div style={{paddingTop: '1em'}}>
+                <div style={{fontFamily: 'bricolage-grotesque', fontStyle: 'bold', lineHeight: '1.8em', color: 'rgb(91, 87, 72)', padding: '1.5px', letterSpacing: '0.8px', fontWeight: '1000', fontSize: '11px'}}>
+                  {imageTitle}
+                </div>
+              </div>
+              <div>
+                <div style={{fontFamily: 'PT Sans', fontStyle: 'normal', lineHeight: '1.8em', color: 'rgb(91, 87, 72)', padding: '1.5px', marginTop: '0.5em', letterSpacing: '0.22px', fontWeight: '400', whiteSpace: 'pre-line', paddingBottom: '4em', fontSize: '11px'}}>
+                  {imageBody}
+              </div>
+              </div>
+              </div>
+          </>)
+      }
+      else {
+          if (index !== currentImage) {
+              imageObjects.push(<img style={{opacity: '0', position: 'absolute'}} src={`images/${category}/${imageName}`} key={index} alt='artpiece' className='subImages'/>)
+          }
+          else {
+              imageObjects.push(<img id='change-animation' src={`images/${category}/${imageName}`} key={index} alt='artpiece' className='subImages'/>)
+          }
+      }
+  })
+  return (
+      <>        
+      {imageObjects}
+      </>
+  )
+}
 const Home = () => {
 
-  var imageName = ''
+  var imageName = []
   for (var i in homeImage) {
-    imageName = i;
-
+          imageName.push(i)
   }
-  let directory = imageName.split('.')[0].slice(0, -1).toLowerCase()
-  let homeImagePath = `images/${directory}/${imageName}`
+
   let imageDescription = homeImage[imageName]
   let home = true
   let imageTitle =  "'japanese lotus’ 2023"
@@ -79,14 +117,14 @@ const Home = () => {
       <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
         <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
           <Sidebar imageDescription={imageDescription} home={true}/>
-        </div>
-      </div>
-        <div style={{height:'100vh',width:'100vw', position: 'absolute', top: 0, right: 0}}>
-          <div style={{position: 'relative', marginLeft: '23em', marginTop: '2em', marginRight: '0em'}}>
-            <img src={homeImagePath} style={{position: 'relative', maxWidth: '100%', height:'45em', objectFit: 'scale-down', alignSelf: 'center',}}  alt='artpiece'/>
           </div>
-      </div>
-    </div>
+        </div>
+        <div style={{height:'100vh',width:'100vw', position: 'absolute', top: 0, right: 0}}>
+            <div style={{position: 'relative', marginLeft: '18em', marginTop: '4em', justifyContent: 'center', textAlign: 'center', marginRight:'7em'}}>
+                <SelectedPhoto imageName={imageName} category={'intaglio'} currentImage={0}/>
+            </div>
+        </div>
+        </div>
   );
 }
 
