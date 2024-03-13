@@ -19,11 +19,11 @@ const About = () => {
             <div style={{position: 'relative', justifyContent: 'center', textAlign: 'center'}}>
             <img src={'images/about/aboutMobile.jpg'} alt='biophoto' style={{position: 'relative', width: '100%', height: '15em', objectFit: 'scale-down', alignSelf: 'center', display: 'inline-block', paddingTop: '1em',  paddingBottom: '0em',marginRight:'39.5em'}}/>
             </div>
-            <div className="Pages" style={{marginTop: '1.5em', width: '65%', marginLeft: '0em', whiteSpace: 'pre-line', marginBottom: '0.75em', fontSize: '15px', textAlign: 'left'}}>
+            <div className="Pages" style={{marginTop: '1.5em', width: '75%', marginLeft: '0em', whiteSpace: 'pre-line', marginBottom: '0.75em', fontSize: '15px', textAlign: 'left'}}>
         {`Artist • Printmaker`}
 
         </div>
-            <div className="Pages" style={{whiteSpace: 'pre-line', width: '70%', fontSize: '15px', paddingBottom: '4em'}}>
+            <div className="Pages" style={{whiteSpace: 'pre-line', width: '75%', fontSize: '15px', paddingBottom: '4em'}}>
             {aboutDescription}
             </div>
         </div>
