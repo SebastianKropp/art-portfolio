@@ -23,7 +23,7 @@ const About = () => {
         {`Artist • Printmaker`}
 
         </div>
-            <div className="Pages" style={{whiteSpace: 'pre-line', width: '65%', fontSize: '15px', paddingBottom: '4em'}}>
+            <div className="Pages" style={{whiteSpace: 'pre-line', width: '70%', fontSize: '15px', paddingBottom: '4em'}}>
             {aboutDescription}
             </div>
         </div>
