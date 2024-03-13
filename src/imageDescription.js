@@ -7,6 +7,10 @@ let homeImage = {
 
 let imageDescription = 
 {
+    "litho2.jpg": {
+        "Title": "'reaching-out' 2022",
+        "Body": "a study on Autumn Flowers by Tomioka Tessa \n\"lithograph, 15\"x 22\""
+    },
     "litho0.jpg": {
         "Title": '\'banana slug\' 2022',
         "Body": "lithograph, 8\"x10\"",
@@ -15,10 +19,6 @@ let imageDescription =
     "litho1.jpg": {
     "Title": "'sama' 2022",
     "Body": "a study on La Samaritaine by Alphonse Mucha \n\"lithograph, 8\"x17\""
-    },
-    "litho2.jpg": {
-    "Title": "'reaching-out' 2022",
-    "Body": "a study on Autumn Flowers by Tomioka Tessa \n\"lithograph, 15\"x 22\""
     },
     "litho3.jpg": {
     "Title": "'one-leg quail’ 2022",
