@@ -19,7 +19,8 @@ body {
 
 .menuBarClosed {
   width: 100%; 
-  text-align: center; 
+  text-align: center;
+  height: 65vh;
   background-color: #6f6b5d;
   animation: slideIn 0.5s cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
@@ -359,11 +360,22 @@ html {
 
 @keyframes slideIn {
   from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 56vh; */
+
     transform: translateY(-100%);
     opacity: 0.5; /* Initial opacity */
     font-size: 12pt;
   }
   to {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 56vh; */
     transform: translateY(0%);
     opacity: 1; /* Final opacity */
     font-size: 12pt;

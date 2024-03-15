@@ -39,17 +39,17 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
             menuBar.style.animation = 'none'
             if (!firstRender) {
               menuBar.style.animation = 'slideOut 1s cubic-bezier(0.17, 0.04, 0.03, 0.94)'
+              //wait for animation
+              setTimeout(() => {
+                menuBar.style.animation = 'none'
+                menuBar.className = 'menuBarOpen'
+                menuBarText.className = 'menuBarTextOpen'
+                setRemoveBar(false)
+              }, 850)
             }
-            //wait for animation
-            setTimeout(() => {
-              menuBar.style.animation = 'none'
-              menuBar.className = 'menuBarOpen'
-              menuBarText.className = 'menuBarTextOpen'
-              setRemoveBar(false)
-            }, 1000)
         }
       }
-    }, [isMenuOpen])
+    }, [isMenuOpen, setIsMenuOpen, firstRender])
     //If isMobile is true, create dropdown instead of sidebar
     if (isMobile) {
       return(
@@ -88,16 +88,19 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', marginBottom: '20px'}} onClick={() => (navigate('/ecoprints'))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', marginBottom: '20px'}} onClick={() => (navigate('/ecoprints'))}>
                       {'Eco Print'}
                     </div>
                   </div>
                   <div>
-                    <div className='OtherPagesMobile' style={{marginTop: '0em'}} onClick={() => (navigate('/about'))}>
+                    <div className='OtherPagesMobile' style={{borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', paddingBottom: '0.5em', marginTop: '0em'}} onClick={() => (navigate('/about'))}>
                       {'About'}
                     </div>
                   </div>
-                  <div className='PagesMobile' style={{position: 'relative', paddingBottom: '2em', opacity: '0.5', textAlign: 'center', fontSize: '7pt'}}>
+                  <div>
+                    <img style={{paddingTop: '1em', width: '5em'}} src={'images/beko.jpg'} alt='Beko'/>
+                  </div>
+                  <div className='PagesMobile' style={{position: 'absolute', paddingBottom: '2em', opacity: '0.5', textAlign: 'center', fontSize: '7pt', bottom: 0}}>
           Designed by Sebastian Kropp
         </div>
                   </div>
