@@ -63,37 +63,37 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
                 {removeBar ? 
                 <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center'}}>
                   <div>
-                    <div className='PagesMobile' onClick={() => (navigate('/'))}>
+                    <div className='PagesMobile' onClick={() => (navigate('/') && window.scrollTo(0, 0))}>
                       {'Home'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/lithographs'))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/lithographs') && window.scrollTo(0, 0))}>
                       {'Lithography'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/screenprints'))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/screenprints') && window.scrollTo(0, 0))}>
                       {'Screenprint'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/intaglio'))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/intaglio') && window.scrollTo(0, 0))}>
                       {'Photo Intaglio'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/reliefprints'))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/reliefprints') && window.scrollTo(0, 0))}>
                       {'Relief'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', marginBottom: '20px'}} onClick={() => (navigate('/ecoprints'))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', marginBottom: '20px'}} onClick={() => (navigate('/ecoprints') && window.scrollTo(0, 0))}>
                       {'Eco Print'}
                     </div>
                   </div>
                   <div>
-                    <div className='OtherPagesMobile' style={{borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', paddingBottom: '0.5em', marginTop: '0em'}} onClick={() => (navigate('/about'))}>
+                    <div className='OtherPagesMobile' style={{borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', paddingBottom: '0.5em', marginTop: '0em'}} onClick={() => (navigate('/about') && window.scrollTo(0, 0))}>
                       {'About'}
                     </div>
                   </div>
