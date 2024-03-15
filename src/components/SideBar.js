@@ -100,7 +100,7 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
                   <div>
                     <img style={{paddingTop: '1em', width: '5em'}} src={'images/beko.jpg'} alt='Beko'/>
                   </div>
-                  <div className='PagesMobile' style={{position: 'absolute', paddingBottom: '2em', opacity: '0.5', textAlign: 'center', fontSize: '7pt', bottom: 0}}>
+                  <div className='PagesMobile' style={{position: 'absolute', 'bottom': 0, padding: '1.5em', fontSize: '0.5em', paddingRight: '2em', opacity: '0.25'}}>
           Designed by Sebastian Kropp
         </div>
                   </div>
