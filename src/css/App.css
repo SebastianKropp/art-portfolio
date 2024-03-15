@@ -1,11 +1,14 @@
 
 :root {
   --doc-height: 100%;
+  --doc-width: 100%;
+  width: 100%;
+  height: 100%;
  }
 
 body {
-  width: '100vw';
-  height: '100vh';
+  width: '100%';
+  height: '100%';
   background-color: #fcfcf6;
   overflow-x: hidden; /* Hide horizontal scrollbar */
   height: var(--doc-height);
@@ -66,11 +69,7 @@ root {
   height: '100vh';
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
-html {
-  
-  overflow-x: hidden; /* Hide horizontal scrollbar */
 
-}
 @font-face {
   font-family: 'brandon-grotesque';
   src: local('brandon-grotesque'), url(../fonts/HvDTrial_Brandon_Grotesque_light-BF64a625c93e709.otf) format('opentype');

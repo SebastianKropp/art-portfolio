@@ -46,6 +46,7 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
     )
 }
 const EcoPrints = () => {
+    window.scrollTo(0, 0);
     var imageName = []
     let category = 'ecoprint'
 

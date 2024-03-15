@@ -46,6 +46,7 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
     )
 }
 const Intaglio = () => {
+    window.scrollTo(0, 0);
     var imageName = []
     let category = 'intaglio'
 

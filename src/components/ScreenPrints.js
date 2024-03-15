@@ -47,6 +47,7 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
 }
 
 const ScreenPrints = () => {
+    window.scrollTo(0, 0);
     var imageName = []
     let category = 'screenprint'
 

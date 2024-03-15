@@ -48,7 +48,7 @@ const SelectedPhoto = ({imageName, category, currentImage}) =>{
   )
 }
 const Home = () => {
-
+  window.scrollTo(0, 0);
   var imageName = []
   for (var i in homeImage) {
           imageName.push(i)

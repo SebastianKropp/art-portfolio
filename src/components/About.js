@@ -7,6 +7,7 @@ import { isMobile } from 'react-device-detect';
 import Sidebar from './SideBar';
 
 const About = () => {
+    window.scrollTo(0, 0);
     let imagePath = `images/about/about.jpg`
     if (isMobile) {
         return (

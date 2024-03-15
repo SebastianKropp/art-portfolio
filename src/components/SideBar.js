@@ -63,37 +63,37 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
                 {removeBar ? 
                 <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center'}}>
                   <div>
-                    <div className='PagesMobile' onClick={() => (navigate('/') && window.scrollTo(0, 0))}>
+                    <div className='PagesMobile' onClick={() => (navigate('/') )}>
                       {'Home'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/lithographs') && window.scrollTo(0, 0))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/lithographs'))}>
                       {'Lithography'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/screenprints') && window.scrollTo(0, 0))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/screenprints') )}>
                       {'Screenprint'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/intaglio') && window.scrollTo(0, 0))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/intaglio') )}>
                       {'Photo Intaglio'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/reliefprints') && window.scrollTo(0, 0))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2'}} onClick={() => (navigate('/reliefprints') )}>
                       {'Relief'}
                     </div>
                   </div>
                   <div>
-                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', marginBottom: '20px'}} onClick={() => (navigate('/ecoprints') && window.scrollTo(0, 0))}>
+                    <div className='PagesMobile' style={{borderTop: '1px solid #FCFCF7B3', borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', marginBottom: '20px'}} onClick={() => (navigate('/ecoprints') )}>
                       {'Eco Print'}
                     </div>
                   </div>
                   <div>
-                    <div className='OtherPagesMobile' style={{borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', paddingBottom: '0.5em', marginTop: '0em'}} onClick={() => (navigate('/about') && window.scrollTo(0, 0))}>
+                    <div className='OtherPagesMobile' style={{borderBottom: '1px solid #FCFCF7B3', borderImage: 'radial-gradient(#f6b73c, #0000) 2', paddingBottom: '0.5em', marginTop: '0em'}} onClick={() => (navigate('/about') )}>
                       {'About'}
                     </div>
                   </div>
@@ -109,7 +109,7 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
             </div>
           </div>
           <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center'}}>
-            <h1 onClick={() => (navigate('/'))} style={{cursor: 'pointer', fontFamily: 'florenescans', fontSize: '20px', fontStyle: 'normal', letterSpacing: '0.2em', lineHeight: '1.4em', fontWeight: '500', textTransform: 'uppercase', color: '#6d674f', whiteSpace: 'pre-line', paddingBottom: '1em', paddingTop: '3em'}}>
+            <h1 onClick={() => (navigate('/'))} className="title" style={{cursor: 'pointer', fontFamily: 'florenescans', fontSize: '20px', fontStyle: 'normal', letterSpacing: '0.2em', lineHeight: '1.4em', fontWeight: '500', textTransform: 'uppercase', color: '#6d674f', whiteSpace: 'pre-line', paddingBottom: '1em', paddingTop: '3em'}}>
               {'Delaney Stewart'}
             </h1>
             </div>
