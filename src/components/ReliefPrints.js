@@ -88,7 +88,7 @@ const ReliefPrints = () => {
             {/* left aligned flex column */}
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100vw', paddingLeft: ''}}>
               <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingLeft: ''}}>
-                <Sidebar imageDescription={imageDescription} home={true}/>
+                <Sidebar imageDescription={imageDescription} home={false} category="Relief"/>
                 <SelectedPhoto imageName={imageName} category={category} currentImage={currentImage}/>
                 </div>
                 </div>

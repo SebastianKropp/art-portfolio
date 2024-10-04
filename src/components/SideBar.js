@@ -13,7 +13,7 @@ function useFirstRender() {
 
   return firstRender.current;
 }
-const Sidebar = ({imageDescription, home, handleButtonClick}) => {
+const Sidebar = ({imageDescription, home, handleButtonClick, category}) => {
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [removeBar, setRemoveBar] = useState(false);
@@ -110,7 +110,7 @@ const Sidebar = ({imageDescription, home, handleButtonClick}) => {
           </div>
           <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center'}}>
             <h1 onClick={() => (navigate('/'))} className="title" style={{cursor: 'pointer', fontFamily: 'florenescans', fontSize: '20px', fontStyle: 'normal', letterSpacing: '0.2em', lineHeight: '1.4em', fontWeight: '500', textTransform: 'uppercase', color: '#6d674f', whiteSpace: 'pre-line', paddingBottom: '1em', paddingTop: '3em'}}>
-              {'Delaney Stewart'}
+              {home? 'Delaney Stewart' : category}
             </h1>
             </div>
         </>

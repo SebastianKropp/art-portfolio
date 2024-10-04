@@ -5,6 +5,28 @@ import { imageDescription } from '../imageDescription.js';
 import { useEffect } from 'react';
 import Sidebar from './SideBar';
 import { isMobile } from 'react-device-detect';
+import ImageGallery from "react-image-gallery";
+
+// const images = [
+//   {
+//     original: "https://picsum.photos/id/1018/1000/600/",
+//     thumbnail: "https://picsum.photos/id/1018/250/150/",
+//   },
+//   {
+//     original: "https://picsum.photos/id/1015/1000/600/",
+//     thumbnail: "https://picsum.photos/id/1015/250/150/",
+//   },
+//   {
+//     original: "https://picsum.photos/id/1019/1000/600/",
+//     thumbnail: "https://picsum.photos/id/1019/250/150/",
+//   },
+// ];
+
+// class MyGallery extends React.Component {
+//   render() {
+//     return <ImageGallery items={images} />;
+//   }
+// }
 const SelectedPhoto = ({imageName, category, currentImage}) =>{
     let imageObjects = []
     imageName.forEach((imageName, index) => {
@@ -89,7 +111,7 @@ const Intaglio = () => {
             {/* left aligned flex column */}
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100vw', paddingLeft: ''}}>
               <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingLeft: ''}}>
-                <Sidebar imageDescription={imageDescription} home={true}/>
+                <Sidebar imageDescription={imageDescription} home={false} category="Photo Intaglio"/>
                 <SelectedPhoto imageName={imageName} category={category} currentImage={currentImage}/>
                 </div>
                 </div>
