@@ -18,7 +18,7 @@ const About = () => {
             <Sidebar imageDescription={''} home={true} handleButtonClick={''} />
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', paddingLeft: ''}}>
             <div style={{position: 'relative', justifyContent: 'center', textAlign: 'center'}}>
-            <img src={'images/about/aboutMobile.jpg'} alt='biophoto' style={{position: 'relative', width: '100%', height: '15em', objectFit: 'scale-down', alignSelf: 'center', display: 'inline-block', paddingTop: '1em',  paddingBottom: '0em',marginRight:'39.5em'}}/>
+            <img src={'images/about/about.jpg'} alt='biophoto' style={{position: 'relative', maxWidth: '80%',maxHeight: '60%', paddingTop: '1em', objectFit: 'scale-down', alignSelf: 'center'}}/>
             </div>
             <div className="Pages" style={{marginTop: '1.5em', width: '75%', marginLeft: '0em', whiteSpace: 'pre-line', marginBottom: '0.75em', fontSize: '15px', textAlign: 'left'}}>
         {`Artist • Printmaker`}
@@ -42,7 +42,7 @@ const About = () => {
             </div>
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start', width: '100vw', paddingLeft: ''}}>
             
-            <img src={imagePath} alt='biophoto' style={{position: 'relative', width: '100%', height:'45em', objectFit: 'cover', objectPosition: '38em 10em', marginTop: '-6em', right: '20em'}}/>
+            <img src={imagePath} alt='biophoto' style={{position: 'relative', maxWidth: '80%',maxHeight: '60%', paddingTop: '7%', objectFit: 'scale-down', alignSelf: 'center'}}/>
         <div className="Pages" style={{marginTop: '3em', width: '55%', marginLeft: '19em', whiteSpace: 'pre-line', marginBottom: '0.25em', fontSize: '15px', textAlign: 'left'}}>
         {`Delaney Stewart
         Artist • Printmaker`}

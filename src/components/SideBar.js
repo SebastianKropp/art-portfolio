@@ -159,7 +159,10 @@ const Sidebar = ({imageDescription, home, handleButtonClick, category}) => {
           </div>
           
           <div>
-            <img style={{paddingTop: '1.75em', width: '6em'}} src={'images/beko.jpg'} alt='Beko'/>
+            <img style={{paddingTop: '1.75em', width: '6em'}} src={'images/beko.jpg'} alt='Beko' onClick={() => window.location.href = 'https://printhousebeko.myshopify.com/'}/>
+            <div className='OtherPages' onClick={() => window.location.href = 'https://printhousebeko.myshopify.com/'}>
+              {'Shop'}
+            </div>
           </div>
 
           
